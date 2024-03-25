@@ -39,7 +39,7 @@ const Sinusoid = () => {
   const [amountOfPeaks, setAmountOfPeaks] = useState([10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]);
   const [period, setPeriod] = useState([2, 1, 3.3, 4, 1.3, 3, 2, 2.3]);
   const [scale, setScale] = useState(15);
-  const [numberOfPoints, setNumberOfPoints] = useState([60000, 60000, 60000, 60000, 60000, 60000, 60000, 60000,]);
+  const [numberOfPoints, setNumberOfPoints] = useState([60000, 60000, 60000, 90000, 60000, 60000, 60000, 60000,]);
 
   const color = ['gold', '#d57373', '#faabfa', 'lightblue', 'white', '#9ef49e', 'orange', '#eacaca'];
 
@@ -171,7 +171,7 @@ const Sinusoid = () => {
                 valueLabelDisplay="auto"
                 min={100}
                 max={90000}
-                value={numberOfPoints}
+                value={numberOfPoints[index]}
                 step={1}
                 onChange={(e) => {
                   const copyNumberOfPoints = [...numberOfPoints];
