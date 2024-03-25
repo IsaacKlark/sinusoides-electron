@@ -15,7 +15,7 @@ const SinusoidFn = ({ numOfPoints, amplitude, scale, amountOfPeaks, period, colo
       const array = positions.array;
       for (let i = 0; i < numOfPoints; i++) {
         const x = (i / numOfPoints) * amountOfPeaks - amountOfPeaks / 2;
-        const y = Math.sin(x * period) * amplitude;
+        const y = Math.sin(x * (10 - period)) * amplitude;
         array[i * 3] = x;
         array[i * 3 + 1] = y;
         array[i * 3 + 2] = 0;
@@ -37,7 +37,7 @@ const SinusoidFn = ({ numOfPoints, amplitude, scale, amountOfPeaks, period, colo
 const Sinusoid = () => {
   const [amplitude, setAmplitude] = useState([1, 2, 1.4, 4, 0.7, 3, 2.2, 3.3]);
   const [amountOfPeaks, setAmountOfPeaks] = useState([10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]);
-  const [period, setPeriod] = useState([2, 1, 3.3, 3, 1.3, 3, 2, 2.3]);
+  const [period, setPeriod] = useState([8, 9, 6.7, 7, 8.7, 7, 8, 7.7]);
   const [scale, setScale] = useState(15);
   const [numberOfPoints, setNumberOfPoints] = useState([60000, 60000, 60000, 90000, 60000, 60000, 60000, 60000,]);
 
