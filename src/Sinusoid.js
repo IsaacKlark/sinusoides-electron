@@ -48,7 +48,7 @@ const Sinusoid = ({ _amplitude }) => {
       alignItems: 'center',
       width: "650px"
     }}>
-      <Canvas style={{ background: 'black', height: '650px', width: "650px" }} camera={{ position: [0, 0, scale], far: 10000 }}>
+      <Canvas style={{ background: 'black', height: '650px', width: "650px", borderRadius: '10px' }} camera={{ position: [0, 0, scale], far: 10000 }}>
         <SinusoidFn numOfPoints={numberOfPoints} amplitude={amplitude} scale={scale} amountOfPeaks={amountOfPeaks} />
       </Canvas>
       <Box sx={{
