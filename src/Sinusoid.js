@@ -37,7 +37,7 @@ const SinusoidFn = ({ numOfPoints, amplitude, scale, amountOfPeaks, period, colo
 const Sinusoid = () => {
   const [amplitude, setAmplitude] = useState([1, 2, 1.4, 4, 0.7, 3, 2.2, 3.3]);
   const [amountOfPeaks, setAmountOfPeaks] = useState([10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]);
-  const [period, setPeriod] = useState([2, 1, 3.3, 4, 1.3, 3, 2, 2.3]);
+  const [period, setPeriod] = useState([2, 1, 3.3, 3, 1.3, 3, 2, 2.3]);
   const [scale, setScale] = useState(15);
   const [numberOfPoints, setNumberOfPoints] = useState([60000, 60000, 60000, 90000, 60000, 60000, 60000, 60000,]);
 
@@ -49,9 +49,9 @@ const Sinusoid = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      width: "650px"
+      width: "1000px"
     }}>
-      <Canvas style={{ background: 'black', height: '650px', width: "650px", borderRadius: '10px' }} camera={{ position: [0, 0, scale], far: 10000 }}>
+      <Canvas style={{ background: 'black', height: '1000px', width: "1000px", borderRadius: '10px' }} camera={{ position: [0, 0, scale], far: 10000 }}>
         {
           amplitude.map((el, index) => (
             <SinusoidFn
@@ -68,7 +68,7 @@ const Sinusoid = () => {
       </Canvas>
       {
         amplitude.map((el, index) => (
-          <Box sx={{ background: color[index], padding: '20px', width: '610px' }} key={index}>
+          <Box sx={{ background: color[index], padding: '20px', width: '960px' }} key={index}>
             <Box sx={{
               display: 'flex',
               flexDirection: 'column',
